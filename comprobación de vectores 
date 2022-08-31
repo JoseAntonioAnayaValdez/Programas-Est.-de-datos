@@ -1,0 +1,199 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JoseAntonioAnayaValdez/Programas-Est.-de-datos/blob/main/comprobaci%C3%B3n%20de%20vectores%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Tl-Eq4SsX-1S"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\\Practica 1:\n",
+        "comparacion de vectores \n",
+        "Jose Antonio Anaya Valdez\n",
+        "22/08/2022\n"
+      ],
+      "metadata": {
+        "id": "4UXDjaK1YLJZ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# \"Algoritmo \"\n",
+        "\n",
+        "Vamos a capturar un texto, lo vamos a pasar a un vector, y se va a comparar con otro vector y revisar todas o alguna de las palabras; si estan todas las palabras, se realiza una acción, si no realiza otra acción.\n",
+        "Se utiliza los metodos split()"
+      ],
+      "metadata": {
+        "id": "pH4XGQmqZp3_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = \"recuerda que no importa en que consola juegues todos somos gamer \"\n",
+        "aTexto=texto.split()"
+      ],
+      "metadata": {
+        "id": "oHk7d3ijaRbt"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(aTexto)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DN9Xw_GnbUz8",
+        "outputId": "ca7a7cc7-2d0b-44db-eaeb-f990e9decbe7"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['recuerda', 'que', 'no', 'importa', 'en', 'que', 'consola', 'juegues', 'todos', 'somos', 'gamer']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Construimos el metodo de busqueda"
+      ],
+      "metadata": {
+        "id": "2AbD0_30gGWN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "palabras = ['recuerda','gamer']\n"
+      ],
+      "metadata": {
+        "id": "jE1gSQlKgKLZ"
+      },
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Buscamos si existe alguna coincidencia"
+      ],
+      "metadata": {
+        "id": "r16eC5Gagwjg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if any(palabra in aTexto for palabra in palabras):\n",
+        "  print(\"El texto es un saludo\")\n",
+        "else:\n",
+        "  print(\"El texto no es un saludo\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0xVhFt9xg0ky",
+        "outputId": "e7e7e0ae-2aa3-44a6-da3a-30fda0df9c15"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "El texto es un saludo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Probamos con all"
+      ],
+      "metadata": {
+        "id": "zKM78Jepk8oZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "palabras = ['recuerda', 'que', 'no', 'importa', 'en', 'que', 'consola', 'juegues', 'no' 'todos', 'somos', 'gamer']"
+      ],
+      "metadata": {
+        "id": "BMRhWQislFBR"
+      },
+      "execution_count": 12,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if all(palabra in aTexto for palabra in palabras):\n",
+        "  print(\"El texto es un saludo\")\n",
+        "else:\n",
+        "  print(\"El texto no es un saludo\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JSHOqKm6l5Ac",
+        "outputId": "c22bc6b8-57ac-444d-f2e7-df546b1efec0"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "El texto no es un saludo\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
