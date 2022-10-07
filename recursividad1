@@ -1,0 +1,77 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMLWLG1/5aJWG9Ffl7qHaAc",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JoseAntonioAnayaValdez/Programas-Est.-de-datos/blob/main/recursividad1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "w7LP7Y_QXgv_",
+        "outputId": "e852a03e-1512-4583-8997-5b736d2ee0ae"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "escribe un numero del 1 al 1000 5\n",
+            "el numero a encontrar es mayor, vas en el intento  1\n",
+            "escribe un numero del 1 al 1000 400\n",
+            "el numero a encontrar es mayor, vas en el intento  2\n",
+            "escribe un numero del 1 al 1000 800\n",
+            "el numero a encontrar es menor, vas en el intento  3\n",
+            "escribe un numero del 1 al 1000 54\n",
+            "el numero a encontrar es mayor, vas en el intento  4\n",
+            "escribe un numero del 1 al 1000 421\n",
+            "has encontrado el numero en 5  intentos\n"
+          ]
+        }
+      ],
+      "source": [
+        "cont=0\n",
+        "def juego ():\n",
+        "    x=421\n",
+        "    y=int(input(\"escribe un numero del 1 al 1000 \"))\n",
+        "    global cont \n",
+        "    cont = cont+1\n",
+        "    if y==x:\n",
+        "        print(\"has encontrado el numero en\",cont,\" intentos\")\n",
+        "    else:\n",
+        "        if y>x:\n",
+        "            print(\"el numero a encontrar es menor, vas en el intento \", cont)\n",
+        "            juego()\n",
+        "        else:\n",
+        "            print(\"el numero a encontrar es mayor, vas en el intento \", cont)\n",
+        "            juego()\n",
+        "juego()\n"
+      ]
+    }
+  ]
+}
